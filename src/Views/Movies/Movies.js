@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MoviesCard from '../../components/MoviesCard';
 import { fetchMovies } from '../../services/movies';
+import './Movies.css';
 
 export default function Movies() {
   const [movies, setMovies] = useState([]);
@@ -8,14 +9,14 @@ export default function Movies() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchMovies();
-      console.log(data);
       setMovies(data);
     };
     fetchData();
   }, []);
+
   return (
-    <div>
-      <h2>Movies</h2>
+    <div className="movies">
+      <h1>Star Wars Movies</h1>
       {movies.map((movie) => (
         <MoviesCard key={movie.id} {...{ movie }} />
       ))}
