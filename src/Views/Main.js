@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { fetchMovies } from '../services/movies';
+import React from 'react';
 
 export default function Main() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchMovies();
-      console.log(data);
-    };
-    fetchData();
-  }, []);
-  return <div>Main</div>;
+  return (
+    <div>
+      <h1>Three-Sources</h1>
+      <h4>
+        Welcome to Three-Sources where you can explore diverent pages with very different
+        information on them. Enjoy! :)
+      </h4>
+    </div>
+  );
 }

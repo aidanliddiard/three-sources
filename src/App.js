@@ -3,6 +3,8 @@ import './App.css';
 import Main from './Views/Main';
 import Movies from './Views/Movies/Movies';
 import Header from './components/Header';
+import Directors from './Views/Directors/Directors';
+import Countries from './Views/Countries/Countries';
 
 function App() {
   return (
@@ -15,6 +17,12 @@ function App() {
           </Route>
           <Route path="/movies">
             <Movies />
+          </Route>
+          <Route path="/directors">
+            <Directors />
+          </Route>
+          <Route path="/countries">
+            <Countries />
           </Route>
         </Switch>
       </div>
