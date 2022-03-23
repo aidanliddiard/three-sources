@@ -8,6 +8,7 @@ export default function Directors() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchDirectors();
+      console.log(data);
       setDirectors(data);
     };
     fetchData();
