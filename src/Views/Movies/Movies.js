@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Dropdown from '../../components/Dropdown';
 import MoviesCard from '../../components/MoviesCard';
-import { fetchMovies, fetchMoviesByDirector } from '../../services/movies';
+import { fetchMovies } from '../../services/movies';
 import './Movies.css';
 
 export default function Movies() {
@@ -11,7 +11,6 @@ export default function Movies() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchMovies(director_id);
-      console.log(data);
       setMovies(data);
     };
     fetchData();
